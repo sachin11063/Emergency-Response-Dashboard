@@ -88,6 +88,7 @@ npm run dev
 ## Server runs on:
 - 👉 http://localhost:5001
 
+---
   
 ## 🎨 Frontend Setup
 
@@ -98,7 +99,7 @@ npm run dev
 ```
 
 ## Frontend runs on:
-- 👉 http://localhost:5173 (or Vite default)
+- 👉 http://localhost:3000 (or Vite default)
 
 ---
 
@@ -147,7 +148,7 @@ node scripts/resetAndSeed.js
 ---
 
 ## 🎥 Walkthrough Video
-### A recorded walkthrough demonstrates:
+- A recorded walkthrough demonstrates:
 
 ---
 
