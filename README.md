@@ -20,8 +20,7 @@ The system is designed for **control room operators** to monitor, dispatch, and 
 
 ## Dashboard
 
-<img width="1292" height="907" alt="Screenshot 2025-12-31 at 6 45 33 PM" src="https://github.com/user-attachments/assets/4f797275-6b4e-4cbb-9d2d-f0ebe97dca25" />
-
+<img width="1292" height="907" alt="Screenshot 2025-12-31 at 6 49 12 PM" src="https://github.com/user-attachments/assets/7c344143-23f8-421f-9952-3c42a6c36b09" />
 
 ---
 
