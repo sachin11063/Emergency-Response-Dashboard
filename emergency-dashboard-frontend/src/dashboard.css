@@ -1,0 +1,285 @@
+/* ---------- THEME VARIABLES ---------- */
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --header: #0f172a;
+  --primary: #2563eb;
+}
+
+[data-theme="dark"] {
+  --bg: #0b1220;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --header: #020617;
+  --primary: #3b82f6;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body,
+.dashboard-header,
+.map-wrapper,
+.side-panel,
+.incident-card,
+.metric-card {
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+
+.theme-toggle,
+.dispatch-btn,
+.badge {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+/* ---------- HEADER ---------- */
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: var(--header);
+  color: white;
+  padding: 16px 24px;
+  font-size: 20px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.theme-toggle {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ---------- LAYOUT ---------- */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 3fr 1.3fr;
+  gap: 16px;
+  padding: 16px;
+  height: calc(100vh - 64px);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+/* ---------- MAP ---------- */
+.map-wrapper {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* ---------- SIDE PANEL ---------- */
+.side-panel {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.side-panel h3 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+/* ---------- INCIDENT CARD ---------- */
+.incident-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  animation: fadeIn 0.3s ease;
+}
+
+.incident-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- BADGES ---------- */
+.badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.medium {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.badge.high {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ---------- BUTTON ---------- */
+.dispatch-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dispatch-btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- EMPTY ---------- */
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 40px;
+}
+
+/* ---------- SKELETON ---------- */
+.skeleton {
+  background: linear-gradient(90deg, #e5e7eb, #f3f4f6, #e5e7eb);
+  background-size: 400% 100%;
+  animation: skeleton 1.4s ease infinite;
+  border-radius: 8px;
+}
+
+.skeleton-text {
+  height: 14px;
+  margin-bottom: 10px;
+}
+
+.skeleton-btn {
+  height: 36px;
+}
+
+@keyframes skeleton {
+  0% { background-position: 100% }
+  100% { background-position: 0 }
+}
+
+/* ---------- TOAST ---------- */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s forwards;
+  z-index: 9999;
+}
+
+.toast.success {
+  background: #16a34a;
+}
+
+.toast.error {
+  background: #dc2626;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateY(10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- METRICS ---------- */
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 0 16px 16px;
+}
+
+@media (max-width: 1024px) {
+  .metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.metric-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.metric-label {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.metric-value {
+  margin-top: 6px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.metrics-wrapper {
+  margin-top: 20px; 
+}
+
+.metric-card.total {
+  border-left: 5px solid #2563eb;
+}
+
+.metric-card.pending {
+  border-left: 5px solid #f59e0b;
+}
+
+.metric-card.assigned {
+  border-left: 5px solid #16a34a;
+}
+
+.metric-card.time {
+  border-left: 5px solid #9333ea;
+}
+
