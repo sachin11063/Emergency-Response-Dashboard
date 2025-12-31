@@ -18,6 +18,12 @@ The system is designed for **control room operators** to monitor, dispatch, and 
 
 ---
 
+## Dashboard
+
+<img width="1180" height="820" alt="Screenshot 2025-12-31 at 6 42 24 PM" src="https://github.com/user-attachments/assets/cd519902-d7ee-4a2c-bf24-96b38cb54f40" />
+
+---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -85,7 +91,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 npm run dev
 ```
 
-## Server runs on:
+### Server runs on:
 - 👉 http://localhost:5001
 
 ---
@@ -152,7 +158,7 @@ node scripts/resetAndSeed.js
 
 ---
 
-## 🌍 Deployment Notes (Optional)
+## 🌍 Deployment Notes
 - This project is designed to run locally.
 - However, it can be easily deployed using:
 - MongoDB Atlas
