@@ -85,7 +85,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 npm run dev
 ```
 
-# Server runs on:
+## Server runs on:
 - 👉 http://localhost:5001
 
   
@@ -97,7 +97,7 @@ npm install
 npm run dev
 ```
 
-# Frontend runs on:
+## Frontend runs on:
 - 👉 http://localhost:5173 (or Vite default)
 
 ---
@@ -111,7 +111,7 @@ cd emergency-dashboard-backend
 node scripts/resetAndSeed.js
 ```
 
-# This script:
+## This script:
 - Deletes all existing incidents, units, and dispatches
 - Creates multiple police, ambulance, and fire units
 - Creates low, medium, and high severity incidents with realistic descriptions
@@ -147,7 +147,7 @@ node scripts/resetAndSeed.js
 ---
 
 ## 🎥 Walkthrough Video
-# A recorded walkthrough demonstrates:
+### A recorded walkthrough demonstrates:
 
 ---
 
@@ -178,5 +178,4 @@ node scripts/resetAndSeed.js
 ## 👤 Author
 - Sachin
 - Software Engineer | Full-Stack Developer
-- Project built as part of a technical assessment.
 
